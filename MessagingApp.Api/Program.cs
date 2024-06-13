@@ -1,4 +1,3 @@
-using System.Diagnostics;
 using MessagingApp.Api.Hubs;
 using MessagingApp.Api.Infrastructure;
 
@@ -28,5 +27,3 @@ var customLogger = app.Services.GetRequiredService<MessagingApp.Infrastructure.I
 customLogger.Info(nameof(Program), nameof(app.Run), "Application started");
 
 app.Run();
-
-

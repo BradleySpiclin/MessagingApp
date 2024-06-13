@@ -10,4 +10,3 @@ public static class HubModule
         services.AddSingleton<ChatHub>();
     }
 }
-
