@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="../MessagingApp.Infrastructure/MessagingApp.Infrastructure.csproj" />
+    <ProjectReference Include="../MessagingApp.Interfaces/MessagingApp.Interfaces.csproj" />
   </ItemGroup>
 
 </Project>
