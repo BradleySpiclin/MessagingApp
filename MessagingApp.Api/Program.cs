@@ -4,7 +4,8 @@ using MessagingApp.Api.Infrastructure;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add Modules from infra
-builder.Services.AddLoggingModule();
+builder.Services.AddInfrastructureModule(builder.Configuration);
+builder.Services.AddApplicationModule();
 builder.Services.AddHubModule();
 
 builder.Services.AddEndpointsApiExplorer();

@@ -1,6 +1,6 @@
 ﻿namespace MessagingApp.Contracts;
 
-public class Class1
+public record GroupDto
 {
-
+    public required string Name { get; init; }
 }
