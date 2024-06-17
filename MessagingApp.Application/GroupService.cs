@@ -5,21 +5,21 @@ namespace MessagingApp.Application;
 
 public class GroupService : IGroupService
 {
-    private readonly IGroupRepository _groupRespositoty;
+    private readonly IGroupRepository _groupRepository;
 
     public GroupService(IGroupRepository groupRepository)
     {
-        _groupRespositoty = groupRepository;
+        _groupRepository = groupRepository;
     }
 
     public async Task<bool> CreateGroup(GroupDto groupDto)
     {
-        if (groupDto is null || groupDto.Name is null)
+        if (groupDto is null || string.IsNullOrEmpty(groupDto.Name))
         {
             return false;
         }
 
-        await _groupRespositoty.Create(groupDto);
+        await _groupRepository.Create(groupDto);
 
         return true;
     }

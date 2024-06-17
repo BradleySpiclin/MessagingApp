@@ -6,8 +6,8 @@ using ILogger = MessagingApp.Infrastructure.ILogger;
 
 namespace MessagingApp.Api.Controllers;
 
-[Route("api/[controller]")]
 [ApiController]
+[Route("api/[controller]")]
 public class GroupsController : ControllerBase
 {
     private readonly IGroupService _groupService;
@@ -22,7 +22,6 @@ public class GroupsController : ControllerBase
     }
 
     [HttpPost]
-    [Route("Groups")]
     [ProducesResponseType((int)HttpStatusCode.OK)]
     [ProducesResponseType((int)HttpStatusCode.BadRequest)]
     public async Task<IActionResult> Create([FromBody] GroupDto groupDto)

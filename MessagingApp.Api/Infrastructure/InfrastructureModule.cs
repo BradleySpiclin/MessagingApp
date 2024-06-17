@@ -12,10 +12,10 @@ public static class InfrastructureModule
         IConfiguration configuration)
     {
         services.AddDbContext<AppDbContext>(options =>
-            options.UseSqlServer(configuration.GetConnectionString("DefaultConnectionString")));
+            options.UseSqlServer(configuration.GetConnectionString("DefaultConnectionString"), b => b.MigrationsAssembly("MessagingApp.Api")), ServiceLifetime.Scoped);
 
         services.AddScoped<IGroupRepository, GroupRepository>();
 
-        services.AddSingleton<ILogger, Logger>();
+        services.AddTransient<ILogger, Logger>();
     }
 }

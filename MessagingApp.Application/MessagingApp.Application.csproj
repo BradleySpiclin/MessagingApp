@@ -4,11 +4,12 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../MessagingApp.Interfaces/MessagingApp.Interfaces.csproj"/>
-    <ProjectReference Include="../MessagingApp.Domain/MessagingApp.Domain.csproj"/>
+    <ProjectReference Include="../MessagingApp.Interfaces/MessagingApp.Interfaces.csproj" />
+    <ProjectReference Include="../MessagingApp.Domain/MessagingApp.Domain.csproj" />
   </ItemGroup>
 
 </Project>
